@@ -6,17 +6,19 @@ public class Main {
         int i = 0;
         int randomNumber;
         int guessedNumber = 0;
-        int maximumForLottery = 10;
+        int maximumForLottery = 0;
 
+        System.out.println("---------- Guessing game! ----------"
+                + "\nFrom how many numbers do you want to guess?");
+        maximumForLottery = getIntFromUser();
+
+        // Random function
         Random rnd = new Random();
         randomNumber = rnd.nextInt(maximumForLottery) + 1;
 
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.println("Guess number from 1 to 10!");
         do {
             System.out.println("Type number: ");
-            guessedNumber = getNumberFromUser();
+            guessedNumber = getIntFromUser();
             i += checkUserNumber(guessedNumber, maximumForLottery, randomNumber);
         }while(guessedNumber != randomNumber);
 
@@ -24,7 +26,7 @@ public class Main {
 
     }
 
-    public static int getNumberFromUser(){
+    public static int getIntFromUser(){
         Scanner keyboard = new Scanner(System.in);
         int number = 0;
 
