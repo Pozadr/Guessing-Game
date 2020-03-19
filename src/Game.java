@@ -25,6 +25,10 @@ public class Game {
         System.out.println("Congratulations! You won after " + gameLoopCounter + " chances.");
     }
 
+    public void displayIntro(){
+        System.out.println("---------- Guessing game! ----------");
+    }
+
     private int getIntFromUser(){
         Scanner keyboard = new Scanner(System.in);
         int number = 0;

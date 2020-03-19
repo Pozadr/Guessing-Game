@@ -6,11 +6,11 @@ public class User {
 
     // Getters
     public String getNick(){
-        return nick;
+        return this.nick;
     }
 
     public int getScore() {
-        return score;
+        return this.score;
     }
 
     // Setters
@@ -43,6 +43,10 @@ public class User {
                 System.out.println("Nick name is too short. Try again");
             }
         }
+    }
+
+    public void displayNick(){
+        System.out.println("Your user name is: " + this.nick);
     }
 
 }

@@ -1,12 +1,12 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println("---------- Guessing game! ----------");
+        Game game = new Game();
+        game.displayIntro();
 
         User user1 = new User();
         user1.getNickFromUser();
-        System.out.println("Your user name is: " + user1.getNick());
+        user1.displayNick();
 
-        Game game = new Game();
         game.runGame();
     }
 }
