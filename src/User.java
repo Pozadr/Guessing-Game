@@ -4,6 +4,11 @@ public class User {
     private String nick;
     private int score = 0;
 
+    // Constructor
+    public User(){
+        this.nick = getNickFromUser();
+    }
+
     // Getters
     public String getNick(){
         return this.nick;
@@ -28,7 +33,7 @@ public class User {
     }
 
     // Methods
-    public void getNickFromUser(){
+    public String getNickFromUser(){
         String nick;
         Scanner keyboard = new Scanner(System.in);
 
@@ -36,8 +41,7 @@ public class User {
             System.out.print("Type your nick: ");
             nick = keyboard.next();
             if(nick.length() > 1){
-                this.nick = nick;
-                break;
+                return nick;
             }
             else{
                 System.out.println("Nick name is too short. Try again");

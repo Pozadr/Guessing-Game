@@ -4,7 +4,6 @@ public class Main {
         game.displayIntro();
 
         User user1 = new User();
-        user1.getNickFromUser();
         user1.displayNick();
 
         game.runGame();
