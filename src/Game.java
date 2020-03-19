@@ -9,8 +9,7 @@ public class Game {
 
 
     public void runGame(){
-        System.out.println("---------- Guessing game! ----------"
-                + "\nFrom how many numbers do you want to guess?");
+        System.out.println("From how many numbers do you want to guess?");
         maximumForLottery = getIntFromUser();
 
         // Random function
@@ -44,19 +43,19 @@ public class Game {
     }
 
     private int checkUserNumber(){
-        if(this.guessedNumber > this.maximumForLottery){
+        if(guessedNumber > maximumForLottery){
             System.out.println("Your number is too big. Try again!");
             return 0;
         }
-        else if (this.guessedNumber < 1){
+        else if (guessedNumber < 1){
             System.out.println("Your number below 1. Try again!");
             return 0;
         }
-        else if(this.guessedNumber > randomNumber) {
+        else if(guessedNumber > randomNumber) {
             System.out.println("Random number is lower.");
             return 1;
         }
-        else if(this.guessedNumber < randomNumber){
+        else if(guessedNumber < randomNumber){
             System.out.println("Random number is higher.");
             return 1;
         }
